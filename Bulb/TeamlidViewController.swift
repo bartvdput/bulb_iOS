@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import SDWebImage
+import FirebaseStorageUI
 
 class TeamlidViewController: UIViewController {
     
@@ -37,16 +39,9 @@ class TeamlidViewController: UIViewController {
         let url = nameToURL(name: name)
         let imageRef = storageRef.child(url)
         
-        imageRef.data(withMaxSize: 1 * 1024 * 1024) { data, error in
-            if let error = error {
-                // Error
-                print(error)
-            } else {
-                let image: UIImage! = UIImage(data: data!)
-                self.profilePicture.image = image
-            }
-        }
+        let profilePicture: UIImageView = self.profilePicture
         
+        profilePicture.sd_setImage(with: imageRef, placeholderImage: #imageLiteral(resourceName: "profile-placeholder"))
 
     }
     

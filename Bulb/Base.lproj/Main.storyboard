@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="TfE-ma-kAA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="128" id="ifh-38-Mak"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="w2W-3V-azD" appends="YES" id="GXd-Sv-lPY"/>
+                                    <outletCollection property="gestureRecognizers" destination="fIa-XJ-Iz8" appends="YES" id="jXT-5P-8T7"/>
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xl" translatesAutoresizingMaskIntoConstraints="NO" id="QQD-c1-bw2">
@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="height" constant="128" id="yKs-VH-JIf"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ILR-SM-qno" appends="YES" id="Xea-Ma-4gm"/>
+                                    <outletCollection property="gestureRecognizers" destination="tzE-eh-mdF" appends="YES" id="qfu-VM-zeA"/>
                                 </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulb_icon" translatesAutoresizingMaskIntoConstraints="NO" id="h02-QV-7PY">
@@ -63,21 +63,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6bF-k8-F9B"/>
-                    <connections>
-                        <outlet property="bulbLogo" destination="h02-QV-7PY" id="tKG-GW-z5s"/>
-                        <outlet property="hvImageView" destination="1FL-uJ-m8i" id="8aN-Qz-NMZ"/>
-                        <outlet property="xlImageView" destination="QQD-c1-bw2" id="4d9-Cw-1BB"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="w2W-3V-azD">
+                <tapGestureRecognizer id="fIa-XJ-Iz8">
                     <connections>
-                        <segue destination="APD-Db-3cc" kind="push" id="Hm6-qP-hPr"/>
+                        <segue destination="APD-Db-3cc" kind="push" id="3Sm-QZ-7bX"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="ILR-SM-qno">
+                <tapGestureRecognizer id="tzE-eh-mdF">
                     <connections>
-                        <segue destination="uMc-C9-c7a" kind="push" id="1fL-Ey-4dt"/>
+                        <segue destination="uMc-C9-c7a" kind="push" id="aVW-uy-Gl7"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -96,21 +91,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hvTitle" translatesAutoresizingMaskIntoConstraints="NO" id="p0r-cr-S2P">
-                                <rect key="frame" x="67.5" y="50" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="94" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="9Ri-is-dJX"/>
                                     <constraint firstAttribute="width" constant="240" id="beW-QM-knc"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agenda" translatesAutoresizingMaskIntoConstraints="NO" id="SMS-P1-DGh">
-                                <rect key="frame" x="67.5" y="188" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="232" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="326-CH-elN"/>
                                     <constraint firstAttribute="height" constant="128" id="Sh8-DX-Q8J"/>
                                 </constraints>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="team" translatesAutoresizingMaskIntoConstraints="NO" id="l6i-6N-DQ9">
-                                <rect key="frame" x="67.5" y="326" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="370" width="240" height="128"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="8mz-fl-1wF"/>
@@ -233,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agenda" translatesAutoresizingMaskIntoConstraints="NO" id="ZHh-bc-FRo">
-                                <rect key="frame" x="67.5" y="188" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="232" width="240" height="128"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="WOx-Ft-81Z"/>
@@ -244,14 +239,14 @@
                                 </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xltitle" translatesAutoresizingMaskIntoConstraints="NO" id="u31-3H-IKZ">
-                                <rect key="frame" x="67.5" y="50" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="94" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="4HJ-Q4-I2V"/>
                                     <constraint firstAttribute="height" constant="128" id="PgD-uR-NMm"/>
                                 </constraints>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="team" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-6n-abv">
-                                <rect key="frame" x="67.5" y="326" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="370" width="240" height="128"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="bUl-6D-Yh8"/>
@@ -304,14 +299,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teamtitle" translatesAutoresizingMaskIntoConstraints="NO" id="6XA-dY-HVW">
-                                <rect key="frame" x="67.5" y="40" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="84" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Bwv-sy-u1c"/>
                                     <constraint firstAttribute="height" constant="128" id="aun-Kz-DI5"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s2q-Q4-d0T">
-                                <rect key="frame" x="0.0" y="178" width="375" height="479"/>
+                                <rect key="frame" x="0.0" y="222" width="375" height="435"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="f27-eD-1hq"/>
@@ -375,34 +370,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pim-Mi-TU1">
-                                <rect key="frame" x="169" y="45" width="220" height="20.5"/>
+                                <rect key="frame" x="169" y="89" width="220" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3Up-Tx-rqc" userLabel="profile-picture">
-                                <rect key="frame" x="26" y="40" width="128" height="128"/>
+                                <rect key="frame" x="26" y="84" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="fe8-aU-7ih"/>
                                     <constraint firstAttribute="height" constant="128" id="sED-5a-nxN"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-phone" translatesAutoresizingMaskIntoConstraints="NO" id="O1r-Fe-l54">
-                                <rect key="frame" x="26" y="193" width="32" height="32"/>
+                                <rect key="frame" x="26" y="237" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="WHG-sc-AiQ"/>
                                     <constraint firstAttribute="width" constant="32" id="aiH-Vz-ArN"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="eDy-x7-FAB">
-                                <rect key="frame" x="25" y="235" width="32" height="32"/>
+                                <rect key="frame" x="25" y="279" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="D8t-HG-Ypj"/>
                                     <constraint firstAttribute="width" constant="32" id="qvp-a2-Rl0"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I8O-Ft-laZ">
-                                <rect key="frame" x="77" y="233" width="272" height="30"/>
+                                <rect key="frame" x="77" y="277" width="272" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="F2Q-um-jEd"/>
@@ -411,7 +406,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kex-l0-sVp">
-                                <rect key="frame" x="78" y="193" width="271" height="30"/>
+                                <rect key="frame" x="78" y="237" width="271" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vRb-xH-a6Q"/>
@@ -451,10 +446,10 @@
             </objects>
             <point key="canvasLocation" x="3356.5" y="438.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main-->
         <scene sceneID="HcI-xQ-AY1">
             <objects>
-                <navigationController storyboardIdentifier="mainNavController" automaticallyAdjustsScrollViewInsets="NO" id="TfE-ma-kAA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNavController" title="Main" automaticallyAdjustsScrollViewInsets="NO" id="TfE-ma-kAA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xS2-Gm-SQv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -547,9 +542,9 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BKx-eB-fEa"/>
-        <segue reference="amc-Qf-7HN"/>
-        <segue reference="wV4-uO-x3e"/>
-        <segue reference="wrL-WL-JMO"/>
+        <segue reference="3Sm-QZ-7bX"/>
+        <segue reference="aVW-uy-Gl7"/>
+        <segue reference="424-4I-LaQ"/>
+        <segue reference="3qZ-xf-RW5"/>
     </inferredMetricsTieBreakers>
 </document>

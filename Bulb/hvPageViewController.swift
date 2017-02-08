@@ -17,9 +17,6 @@ class hvPageViewController: UIViewController {
     //MARK: constants
     let group = "HV"
     
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
