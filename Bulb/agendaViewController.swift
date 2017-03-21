@@ -23,7 +23,6 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var ref: FIRDatabaseReference!
     var group: String = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,21 +64,26 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func nextBulb() {
         // get current date
         let currentDate = NSDate()
-        print("CURRENTDATE", currentDate)
         
         // disregard time
         let today = NSCalendar.current.startOfDay(for: currentDate as Date)
-        print("TODAY", today)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
 
+        //let today = dateFormatter.date(from: "14-01-2017")
+        
         for (index,avond) in avonden.enumerated() {
             let avondDate = dateFormatter.date(from: avond.datum)
             if (today.compare(avondDate!) == ComparisonResult.orderedSame || today.compare(avondDate!) == ComparisonResult.orderedAscending) {
                 // scroll to first bulb event
                 let indexPath = IndexPath(row: index, section: 0)
-                self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.top, animated: true)
+                self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.top, animated: false)
+                
+                // change upcoming event background color
+                let upcomingCell = tableView.cellForRow(at: indexPath)
+                upcomingCell?.backgroundColor = UIColor.lightGray
+                
                 break
             }
         }
@@ -118,16 +122,4 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
