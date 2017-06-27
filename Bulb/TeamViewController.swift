@@ -56,26 +56,9 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.team = newTeam
                 self.tableView.reloadData()                 
             } else {
-                self.showAlert()
+                showAlert(alertMessage: self.alertMessage, view: self)
             }            
         })
-    }
-    
-    // show alert message
-    func showAlert(){
-        let alertController = UIAlertController(title: "Oops!", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
-        let defaultAction = UIAlertAction(title: "Sluiten", style: .default, handler: nil)
-        
-        let retryHandler = { (action:UIAlertAction!) -> Void in
-            self.getFirebaseData()
-        }
-        
-        let retryAction = UIAlertAction(title: "Probeer opnieuw", style: .default, handler: retryHandler)
-        
-        alertController.addAction(defaultAction)
-        alertController.addAction(retryAction)
-        
-        present(alertController, animated:true, completion: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

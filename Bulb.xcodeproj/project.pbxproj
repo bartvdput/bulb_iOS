@@ -26,6 +26,7 @@
 		CC7730491DA79D1F00E0AC07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC7730461DA79B4B00E0AC07 /* GoogleService-Info.plist */; };
 		CC77304D1DA79F5100E0AC07 /* agendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77304C1DA79F5100E0AC07 /* agendaViewController.swift */; };
 		CC7730501DA7B1B900E0AC07 /* Avond.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77304F1DA7B1B900E0AC07 /* Avond.swift */; };
+		CCFEE4F11F0267300045DBE9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEE4F01F0267300045DBE9 /* Util.swift */; };
 		F6F9156A6B480310684D0687 /* Pods_BulbTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E30EDE217002246545CCBDE /* Pods_BulbTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		CC7730461DA79B4B00E0AC07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC77304C1DA79F5100E0AC07 /* agendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = agendaViewController.swift; sourceTree = "<group>"; };
 		CC77304F1DA7B1B900E0AC07 /* Avond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avond.swift; sourceTree = "<group>"; };
+		CCFEE4F01F0267300045DBE9 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CE9F0B626D3BBDFDDEFF57A2 /* Pods_Bulb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bulb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 				CC77304C1DA79F5100E0AC07 /* agendaViewController.swift */,
 				CC5890121DA9067300A9B6F2 /* TeamViewController.swift */,
 				CC44EE9F1DAA728C007D73DA /* TeamlidViewController.swift */,
+				CCFEE4F01F0267300045DBE9 /* Util.swift */,
 			);
 			path = Bulb;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				CC7730421DA7950F00E0AC07 /* xlPageViewController.swift in Sources */,
 				CC7730411DA7950F00E0AC07 /* ViewController.swift in Sources */,
 				CC77304D1DA79F5100E0AC07 /* agendaViewController.swift in Sources */,
+				CCFEE4F11F0267300045DBE9 /* Util.swift in Sources */,
 				CC7730451DA799C000E0AC07 /* hvPageViewController.swift in Sources */,
 				CC7730501DA7B1B900E0AC07 /* Avond.swift in Sources */,
 			);
