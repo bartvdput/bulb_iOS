@@ -53,9 +53,8 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
                     newTeam.append(teamlid)
                 }
                 
-                //reload tableview
                 self.team = newTeam
-                self.tableView.reloadData()
+                self.tableView.reloadData()                 
             } else {
                 self.showAlert()
             }            

@@ -23,8 +23,17 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var ref: FIRDatabaseReference!
     var group: String = ""
     
+    var currentDate: NSDate!
+    var today: Date!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // get current date
+        self.currentDate = NSDate()
+        
+        // disregard time
+        self.today = NSCalendar.current.startOfDay(for: currentDate as Date)
         
         if (group == "HV") {
             ref = FIRDatabase.database().reference(withPath: "avondenHV")
@@ -33,7 +42,6 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         getFirebaseData()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +59,6 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     newAvonden.append(avond)
                 }
                 
-                //reload tableview
                 self.avonden = newAvonden
                 self.tableView.reloadData()
                 self.nextBulb()
@@ -62,27 +69,20 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func nextBulb() {
-        // get current date
-        let currentDate = NSDate()
-        
-        // disregard time
-        let today = NSCalendar.current.startOfDay(for: currentDate as Date)
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-
-        //let today = dateFormatter.date(from: "14-01-2017")
         
-        for (index,avond) in avonden.enumerated() {
+        for (index, avond) in avonden.enumerated() {
             let avondDate = dateFormatter.date(from: avond.datum)
             if (today.compare(avondDate!) == ComparisonResult.orderedSame || today.compare(avondDate!) == ComparisonResult.orderedAscending) {
                 // scroll to first bulb event
                 let indexPath = IndexPath(row: index, section: 0)
                 self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.top, animated: false)
                 
-                // change upcoming event background color
+                /* change upcoming event background color
                 let upcomingCell = tableView.cellForRow(at: indexPath)
                 upcomingCell?.backgroundColor = UIColor.lightGray
+                */
                 
                 break
             }
@@ -94,7 +94,7 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let alertController = UIAlertController(title: "Oops!", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
         let defaultAction = UIAlertAction(title: "Sluiten", style: .default, handler: nil)
         
-        let retryHandler = { (action:UIAlertAction!) -> Void in
+        let retryHandler = {(action:UIAlertAction!) -> Void in
             self.getFirebaseData()
         }
         
@@ -118,6 +118,10 @@ class agendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
+        if(indexPath.row == 11 && indexPath.section == 0) {
+            self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.top, animated: false)
+            cell.backgroundColor = UIColor.lightGray
+        }
         cell.textLabel?.text = String(describing: avonden[indexPath.row])
         
         return cell

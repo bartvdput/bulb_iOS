@@ -21,20 +21,12 @@ struct Teamlid : CustomStringConvertible {
         return "\(voornaam) \(achternaam)"
     }
     
-    init(voornaam: String, achternaam: String, email: String, telefoonnummer: String, plaatje: String) {
-        self.voornaam = voornaam
-        self.achternaam = achternaam
-        self.email = email
-        self.telefoonnummer = telefoonnummer
-        self.plaatje = plaatje
-    }
-    
     init(){
-        self.voornaam = "test"
-        self.achternaam = "test"
-        self.email = "test"
-        self.telefoonnummer = "test"
-        self.plaatje = "test"
+        self.voornaam = ""
+        self.achternaam = ""
+        self.email = ""
+        self.telefoonnummer = ""
+        self.plaatje = ""
     }
     
     init(snapshot: FIRDataSnapshot) {
@@ -45,17 +37,6 @@ struct Teamlid : CustomStringConvertible {
         telefoonnummer = data["telefoonnummer"] as! String
         plaatje = data["plaatje"] as! String
     }
-    
-    /*
-     func toAnyObject() -> Any {
-     return [
-     "beschrijving": beschrijving,
-     "datum": datum,
-     "starttijd": starttijd,
-     "titel": titel
-     ]
-     }
-     */
     
 }
 

@@ -33,22 +33,16 @@ class ViewController: UIViewController {
             do {
                 try device?.lockForConfiguration()
                 if (device?.torchMode == AVCaptureTorchMode.on) {
-                    device?.torchMode = AVCaptureTorchMode.off
-                    // change bulb image to OFF
-                    bulbLogo.image = #imageLiteral(resourceName: "bulb_icon")
+                    device?.torchMode = AVCaptureTorchMode.off              // turn flashlight OFF
+                    bulbLogo.image = #imageLiteral(resourceName: "bulb_icon")                            // change bulb image to OFF
                 } else {
                     do {
-                        try device?.setTorchModeOnWithLevel(1.0)
-                        //change bulb image to ON
-                        bulbLogo.image = #imageLiteral(resourceName: "bulb_on")
-                    } catch {
-                        print(error)
-                    }
+                        try device?.setTorchModeOnWithLevel(1.0)            // turn flashlight ON
+                        bulbLogo.image = #imageLiteral(resourceName: "bulb_on")                          // change bulb image to ON
+                    } catch { print(error) }
                 }
                 device?.unlockForConfiguration()
-            } catch {
-                print (error)
-            }
+            } catch { print (error) }
         } else { print ("No device found!") }
     }
 }
